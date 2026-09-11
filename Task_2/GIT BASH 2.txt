@@ -1,0 +1,219 @@
+Siddharth@DESKTOP-2T6JGJK MINGW64 ~ (main)
+$ mkdir hi
+
+Siddharth@DESKTOP-2T6JGJK MINGW64 ~ (main)
+$ cd hi
+
+Siddharth@DESKTOP-2T6JGJK MINGW64 ~/hi (main)
+$ git init
+Initialized empty Git repository in C:/Users/Siddharth Prasad/hi/.git/
+
+Siddharth@DESKTOP-2T6JGJK MINGW64 ~/hi (main)
+$ git remote add origin https://github.com/stillwave-code/i_am_Sidd.git
+
+Siddharth@DESKTOP-2T6JGJK MINGW64 ~/hi (main)
+$ git status
+On branch main
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        check1.py
+        folder 1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Siddharth@DESKTOP-2T6JGJK MINGW64 ~/hi (main)
+$ git add check1.py
+
+Siddharth@DESKTOP-2T6JGJK MINGW64 ~/hi (main)
+$ git status
+On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   check1.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        folder 1/
+
+
+Siddharth@DESKTOP-2T6JGJK MINGW64 ~/hi (main)
+$ git add folder 1
+fatal: pathspec 'folder' did not match any files
+
+Siddharth@DESKTOP-2T6JGJK MINGW64 ~/hi (main)
+$ git add folder 1
+fatal: pathspec 'folder' did not match any files
+
+Siddharth@DESKTOP-2T6JGJK MINGW64 ~/hi (main)
+$ git branc
+git: 'branc' is not a git command. See 'git --help'.
+g
+Siddharth@DESKTOP-2T6JGJK MINGW64 ~/hi (main)
+$ git branch
+
+Siddharth@DESKTOP-2T6JGJK MINGW64 ~/hi (main)
+$ git commit -m "Initial commit"
+[main (root-commit) c177224] Initial commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 check1.py
+
+Siddharth@DESKTOP-2T6JGJK MINGW64 ~/hi (main)
+$ git branch
+* main
+
+Siddharth@DESKTOP-2T6JGJK MINGW64 ~/hi (main)
+$ git add "folder 1/"
+
+Siddharth@DESKTOP-2T6JGJK MINGW64 ~/hi (main)
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   folder 1/check2.py
+        new file:   folder 1/check3.c
+
+
+Siddharth@DESKTOP-2T6JGJK MINGW64 ~/hi (main)
+$ git restore -staged "folder 1/"
+fatal: could not resolve 'taged'
+
+Siddharth@DESKTOP-2T6JGJK MINGW64 ~/hi (main)
+$ git restore -staged "folder 1"
+fatal: could not resolve 'taged'
+
+Siddharth@DESKTOP-2T6JGJK MINGW64 ~/hi (main)
+$ git restore --staged "folder 1/"
+
+
+
+
+Siddharth@DESKTOP-2T6JGJK MINGW64 ~/hi (main)
+$
+
+Siddharth@DESKTOP-2T6JGJK MINGW64 ~/hi (main)
+$ git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        folder 1/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+Siddharth@DESKTOP-2T6JGJK MINGW64 ~/hi (main)
+$ git branch b
+
+Siddharth@DESKTOP-2T6JGJK MINGW64 ~/hi (main)
+$ git branche
+git: 'branche' is not a git command. See 'git --help'.
+
+The most similar command is
+        branch
+
+Siddharth@DESKTOP-2T6JGJK MINGW64 ~/hi (main)
+$ git branch
+  b
+* main
+
+Siddharth@DESKTOP-2T6JGJK MINGW64 ~/hi (main)
+$ git checkout b
+Switched to branch 'b'
+
+Siddharth@DESKTOP-2T6JGJK MINGW64 ~/hi (b)
+$ git add "folder 1/"
+
+Siddharth@DESKTOP-2T6JGJK MINGW64 ~/hi (b)
+$ git status
+On branch b
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   folder 1/check2.py
+        new file:   folder 1/check3.c
+
+
+Siddharth@DESKTOP-2T6JGJK MINGW64 ~/hi (b)
+$ git commit -m "Committed the changes"
+[b ffc2b02] Committed the changes
+ 2 files changed, 1 insertion(+)
+ create mode 100644 folder 1/check2.py
+ create mode 100644 folder 1/check3.c
+
+Siddharth@DESKTOP-2T6JGJK MINGW64 ~/hi (b)
+$ git push origin main
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 215 bytes | 215.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+To https://github.com/stillwave-code/i_am_Sidd.git
+ * [new branch]      main -> main
+
+Siddharth@DESKTOP-2T6JGJK MINGW64 ~/hi (b)
+$ git branch
+* b
+  main
+
+Siddharth@DESKTOP-2T6JGJK MINGW64 ~/hi (b)
+$ git push origin b
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (4/4), 368 bytes | 184.00 KiB/s, done.
+Total 4 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+remote:
+remote: Create a pull request for 'b' on GitHub by visiting:
+remote:      https://github.com/stillwave-code/i_am_Sidd/pull/new/b
+remote:
+To https://github.com/stillwave-code/i_am_Sidd.git
+ * [new branch]      b -> b
+
+Siddharth@DESKTOP-2T6JGJK MINGW64 ~/hi (b)
+$ git branch
+* b
+  main
+
+Siddharth@DESKTOP-2T6JGJK MINGW64 ~/hi (b)
+$ git checkout main
+Switched to branch 'main'
+
+Siddharth@DESKTOP-2T6JGJK MINGW64 ~/hi (main)
+$ git merge b
+Updating c177224..ffc2b02
+Fast-forward
+ folder 1/check2.py | 0
+ folder 1/check3.c  | 1 +
+ 2 files changed, 1 insertion(+)
+ create mode 100644 folder 1/check2.py
+ create mode 100644 folder 1/check3.c
+
+Siddharth@DESKTOP-2T6JGJK MINGW64 ~/hi (main)
+$ git push origin main
+To https://github.com/stillwave-code/i_am_Sidd.git
+ ! [rejected]        main -> main (fetch first)
+error: failed to push some refs to 'https://github.com/stillwave-code/i_am_Sidd.git'
+hint: Updates were rejected because the remote contains work that you do not
+hint: have locally. This is usually caused by another repository pushing to
+hint: the same ref. If you want to integrate the remote changes, use
+hint: 'git pull' before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+
+Siddharth@DESKTOP-2T6JGJK MINGW64 ~/hi (main)
+$ git pull origin main
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Unpacking objects: 100% (1/1), 896 bytes | 14.00 KiB/s, done.
+From https://github.com/stillwave-code/i_am_Sidd
+ * branch            main       -> FETCH_HEAD
+   c177224..f5ebb64  main       -> origin/main
+Updating ffc2b02..f5ebb64
+Fast-forward
+
+Siddharth@DESKTOP-2T6JGJK MINGW64 ~/hi (main)
+$ git push origin main
+Everything up-to-date

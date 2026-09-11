@@ -1,0 +1,145 @@
+git init
+ls -la
+cd ../
+git clone "link"
+git status
+git can be initialized in two ways either locally or from a remote repository
+git add
+git add --all --->git takes every change and prepares it for next commit
+git add -A
+git reset---> used for unstaging the files
+
+git add . ---->it stages the changes within the current directory we are in
+
+git add * --> only stages new or modified files and not the deleted ones
+
+We can stage individual files by specifying their names
+git config --global user.email "your_email"
+git config --global user.name "your_name"
+
+git commit -m "your_statement"
+git reset HEAD~  ---> this will undo the last commit and bring it back to the working directory
+
+git reset --hard ---> for retrieving the files which had been manually been deleted
+
+git rm --cached "folder_name"---> only removes it from staging keeping the actual file intact in your working iorectory
+ 
+git rm --force "folder_name"---> completely deletes the file
+
+
+git rm -r <Folder> --> recursively removing the files
+if -r is not written then the folder which is written is only delteed not its content
+
+git log --> for checking commits history
+git log --oneline ---> for short summary of the commit summary
+
+Merging---> combining the changes from two branches into one
+
+git branch <branch_name>
+git checkout <branch_name>  ----->for switching to the desired branch
+
+git checkout -b <branch_name> -----> for creating a branch and checking it out at the same time
+
+git branch -d <branch_name>---> for deleting the branch
+
+git merge main -m "Merging main in the development"
+
+git merge development -m "Merging development in the main"
+
+For bringing the  changes to our local repository from the remote repository we use fetch
+
+Pull is used for fetching and merging so that the working directory immediately reflects the remote changes 
+
+Pull=Fetch + Merge
+
+git push origin main
+origin means the remote repository
+
+git pull
+git fetch
+
+git checkout HEAD^  ---> for moving to the upward in a commit tree
+
+git restore <file name> ---> used to revert any file or directory back to its previous state that is the state of its last commit mainly used to undo local uncommitted changes  or to remove changes that were added to the staging area using git add
+
+git restore services <file_name> --->for restoring the entire directory 
+
+git restore --staged <file_name> --->for undoing the changes that were done using the git add command 
+
+git restore --staged .
+
+git restore .  ----> for undo all the changes in the entire repository 
+
+
+git stash----> It temporarily set aside your unfinished work, switch to another branch to do something
+
+git does not allow to switch the branches without committing your changes...so if we are not sure of the committing part there comes the concept of STASHING
+
+
+git stash----->Temporarily set asides your unfinished work and switch to another branch to do something
+git stash pop --->restores the most recent stashed work and removes it from stashed list
+
+git stash apply---> restores your changes but keeps them in the stash list for future use
+
+git stash drop
+git stash list
+
+git revert --->for fixing an old mistake without erasing it that is commit
+
+git reset ---> takes u back to a specific commit and discard all the commits after that point without creating any new commit 
+
+git rebase 
+
+git rebase main
+
+
+
+Pull Request----> A request we make to merge your changes into another branch usually the main branch 
+
+git branch -f main  HEAD~<number_of_times_u_want_to_move_up>
+
+
+
+git cherry-pick <Commit1> <Commit2> <...>
+
+
+git rebase -I HEAD~<number of times  to be moved>
+
+Stage a single file with--->git add app.js
+
+Once a file is staged, git commit seals it into a snapshot.
+
+Got files you never want to commit, like secrets, logs, or build junk? List them in a .gitignore file and git will quietly leave them alone.
+
+
+
+git commit --amend
+
+git tag <name_of_tag> <commit_name>
+
+
+git describe <ref>
+The output of the command looks like:
+
+<tag>-<numCommits>-g<hash>
+
+Where tag is the closest ancestor tag in history, numCommits is how many commits away that tag is, and <hash> is the hash of the commit being described.
+
+
+Remember !!!----> For moving the branch to another commit use this :
+step 1-git checkout <branch name>
+step 2-git reset --hard <necessary commit>
+
+
+git fakeTeamwork  <number of times>
+
+git pull --rebase -----> is shorthand for a fetch and a rebase
+
+
+
+
+
+
+
+
+
