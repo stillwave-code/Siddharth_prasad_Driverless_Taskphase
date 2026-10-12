@@ -9,7 +9,7 @@ class WheelSubscriber : public rclcpp::Node
 public:
   WheelSubscriber() : Node("wheel_subscriber_node")
   {
-    // 1. Subscribe to the /taskone topic
+    
     subscription_ = this->create_subscription<wheel_interfaces::msg::TaskOne>(
       "/taskone", 10, std::bind(&WheelSubscriber::topic_callback, this, _1));
   }
